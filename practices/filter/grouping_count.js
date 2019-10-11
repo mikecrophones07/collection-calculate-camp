@@ -1,8 +1,11 @@
 'use strict';
 
 function grouping_count(collection) {
-
-  //write code here
+  let object = [];
+  [...new Set(collection)].forEach(i => {
+    object[i] = collection.filter(x => x==i).length;
+  });
+  return object;
 }
 
 module.exports = grouping_count;
